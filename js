@@ -1,9 +1,9 @@
-var $accordionCnt = $('.__event-accordion'),
-    $accordionHeader = $('.cnt-accordion_header');
+var $accordionCnt = $('.mod-accordion'),
+    $accordionHeader = $('.mod-accordion_header');
 
     $accordionCnt.each(function() {
 
-        var $accordionChildCnt = $(this).find('.cnt-accordion_cnt');
+        var $accordionChildCnt = $(this).find('.nod-accordion_cnt');
 
         if($(this).find('.cnt-accordion_header').hasClass('active')) {
             $accordionChildCnt.slideDown(300);
@@ -13,27 +13,27 @@ var $accordionCnt = $('.__event-accordion'),
 
     $accordionHeader.on('click', function() {
 
-        var $accordionChildCnt = $(this).parent().find('.cnt-accordion_cnt');
+        var $accordionChildCnt = $(this).parent().find('.mod-accordion_cnt');
 
-        if($(this).hasClass('active')) {
+        if($(this).hasClass('__active')) {
 
             $accordionChildCnt.slideUp(300);
-            $(this).removeClass('active');
+            $(this).removeClass('__active');
 
         } else {
 
-            $accordionHeader.removeClass('active').parent().find('.cnt-accordion_cnt').slideUp(300);
+            $accordionHeader.removeClass('__active').parent().find('.mod-accordion_cnt').slideUp(300);
 
             $accordionChildCnt.slideDown(300);
-            $(this).addClass('active');
+            $(this).addClass('__active');
 
             setTimeout(function() {
 
-                var $thisOffset = $('.cnt-accordion_header.active').offset();
+                var $thisOffset = $('.mod-accordion_header.__active').offset();
 
                 $('body').animate({
 
-                    scrollTop: $thisOffset.top - 60
+                    scrollTop: $thisOffset.top - 50
 
                 }, 500);
 
