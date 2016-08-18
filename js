@@ -1,5 +1,5 @@
 var $accordionCnt = $('.__event-accordion'),
-        $accordionHeader = $('.cnt-accordion_header');
+    $accordionHeader = $('.cnt-accordion_header');
 
     $accordionCnt.each(function() {
 
